@@ -2,11 +2,28 @@
 
 React and Redux are different libraries, react deals with the views only while redux take care of the states application is in and manipulate the whole application according to it.
 
-To connect both of the above libraries we use another library known as react-redux;
 
 # Redux
 
 Redux basically is just a state storage container ! As component states i.e. ("this.state" in class component) stores the state of that particular component the change in that state only effect the component's state and can only be approachable inside its component but in redux it saves the state of the application which can have a wide range of variables, objects and change in redux can effect in whole application and can be approached from anywhere inside the application. 
+
+# React-Redux
+
+To connect both of the above libraries i.e. react and redux we use another library known as react-redux. 
+Particularly its function called {connect}
+
+container have props by state of the application as container can access the piece of state anywhere so it gets the props as
+
+# function mapStateToProps(state){   //state will be included in this container
+#    return {
+#      books: state.books   //this object can be access throughout the container by "this.props.books"
+#    }
+# }
+
+Container component do not export like export default class name instead at the end of the container we use {connect} function of react-redux
+
+# xport default connect(mapStateToProps)( Container class name )
+
 
 # Reducers
 
