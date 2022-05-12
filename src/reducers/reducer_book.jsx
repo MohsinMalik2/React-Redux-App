@@ -4,6 +4,6 @@ export default function(){
         {title: "Lord of Rings"},
         {title: "Hobbit"},
         {title: "Narnia"},
-        {title: "Spy Kids"},
+        {title: "Spy Kids"}
     ]
 }
