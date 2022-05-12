@@ -14,11 +14,11 @@ Particularly its function called {connect}
 
 container have props by state of the application as container can access the piece of state anywhere so it gets the props as
 
-# function mapStateToProps(state){   //state will be included in this container
-#    return {
-#      books: state.books   //this object can be access throughout the container by "this.props.books"
-#    }
-# }
+ function mapStateToProps(state){   //state will be included in this container
+    return {
+      books: state.books   //this object can be access throughout the container by "this.props.books"
+    }
+ }
 
 Container component do not export like export default class name instead at the end of the container we use {connect} function of react-redux
 
