@@ -44,6 +44,8 @@ Example state i.e. have two variables have different values
 
 Special Components in React app which have direct access to the state contains inside redux. Container act as a bridge to facilitate the state effect over front-end of the application.
 
+A container is a normal react component that gets bonded to the application state through the reducer, whenever application state changes the container will re render itself 
+
 
 # Which components of a react app are containers
 
@@ -51,3 +53,21 @@ So, There's no hard and fast rule for that Sometimes the most parent component a
 
 For easy approach we still use most parent component as container and pass the props throughout the website and manipulate the DOM. but that's a you cannot say wrong but not the right way ! Its kinda trick for easiness but for a larger application it can be insecure and less speedy! as in this case you have re render the whole DOM. Irrespect of container components or simple components.
 
+# Action and Action Creators  // use to change the application state
+
+Action is used to change the application state and pass that state to all the reducers and then the containers linked to that reducers will re render according to the new state.
+
+Flow of the Action
+
+So, Action Creators basically a function that returns the action (which'll most probably an oject to change the value of the state)
+
+1. When we trigger the action creator (90% through direct event by the user but sometime by the indirect events like ajax return or error return over some event like a call back function), 
+2. action creator then return an action which then passes to all the reducers automatically
+3. reducers then have a counter action function which is mostly a switch case which identify that should the reducer react over that action or not.
+4. If not then there'll no effect over state and reducer return currentState and everything will be the same.
+5. If yes then reducer pass that new object to the state 
+6. And every container using that reducer and that state will be re render and new values will be pop up to the screen
+
+Action Creators is just a function return actions
+Action is just an object inject to reducers
+Reducers then assess the action(object) and produces a different value for its piece of state
