@@ -2,14 +2,19 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { SelectBook } from '../actions/index'
 import { bindActionCreators } from 'redux'
+
 class BookList extends Component {
 
   renderList(){
       return this.props.books.map((book) => {
           return (
+              
               <li key={book.title} className='list-group-item'>
+
                   {book.title}
+                  
               </li>
+
           )
       })
   }
@@ -18,8 +23,11 @@ class BookList extends Component {
     return (
       
       <ul className='list-group'>
+          
           {this.renderList()}
+
       </ul>
+
     )
   }
 
@@ -30,7 +38,9 @@ class BookList extends Component {
 
 function mapStateToProps(state){
     return {
+      
       books: state.books
+
     }
 }
 
