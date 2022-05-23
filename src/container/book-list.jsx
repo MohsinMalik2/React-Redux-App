@@ -8,13 +8,14 @@ class BookList extends Component {
   renderList(){
       return this.props.books.map((book) => {
           return (
-              
+
               <li 
               key={book.title} 
               className='list-group-item'  
               onClick={() => this.props.SelectBook(book)}>
+
                   {book.title}
-                  
+
               </li>
 
           )
@@ -23,9 +24,9 @@ class BookList extends Component {
 
   render() {
     return (
-      
+
       <ul className='list-group col-sm-4'>
-          
+
           {this.renderList()}
 
       </ul>
@@ -40,20 +41,21 @@ class BookList extends Component {
 
 function mapStateToProps(state){
     return {
-      
+
       books: state.books
 
     }
 }
 
-
 //Special Function to convert action creator coming from actions folder into props 
 //Anything i.e. action creator (function) returned from this function will work as a props 
 
 function mapDispatchToProps(dispatch){
-  
-  //this will equals the SelectBook (Action creator function to the SelectBook object ) which'll then used as a props in this component
-  return bindActionCreators( { SelectBook: SelectBook } , dispatch)
+
+  //this will equals the SelectBook (Action creator function to the SelectBook object ) 
+  //which'll then used as a props in this component
+
+  return bindActionCreators( { SelectBook: SelectBook } , dispatch);
 
 }
 

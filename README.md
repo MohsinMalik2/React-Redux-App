@@ -71,3 +71,20 @@ So, Action Creators basically a function that returns the action (which'll most 
 Action Creators is just a function return actions
 Action is just an object inject to reducers
 Reducers then assess the action(object) and produces a different value for its piece of state
+
+
+# Overview
+
+1. Redux is incharge in managing application state
+2. That state is a single plain js object
+3. Application state is completely different than component state i.e. can't change app state like component states.
+4. Application states is formed by reducers
+5. Reducers all combine together through combineReducers methos inside reducer>index.js
+6. For each key inside combineReducers method is equal to a reducer
+7. Reducer change values of the application state through actions
+8. Action once dispatched, it'll replace every state connecting to it
+9. Each reducer have different cases for different inputs (Switch cases)
+
+10. Action creators a single function that return action
+11. Action just a plain javascript object
+12. Action will always have a type defined and can actually have other any number of properties
